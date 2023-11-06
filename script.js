@@ -9,7 +9,6 @@ if 3
     return scissors
 
 */
-
 function getComputerChoice() {
     let choice = Math.ceil(Math.random() * 3)
     console.log(choice) //debug
@@ -21,11 +20,6 @@ function getComputerChoice() {
         return "scissors"
     }
 }
-
-
-
-
-
 /*
 if ps is rock and cs is rock
     its a tie 
@@ -68,11 +62,25 @@ function playRound(playerSelection, computerSelection) {
 
 }
 
+/*
 let playerSelection = prompt("Make Your Move").toLowerCase()
 const computerSelection = getComputerChoice()
 
 console.log(playRound(playerSelection, computerSelection))
+*/
 
 
+function game() {
+    for (i = 0; i < 5; i++) {
+        let playerSelection = prompt("Make Your Move").toLowerCase()
+        const computerSelection = getComputerChoice()
+
+        console.log(playRound(playerSelection, computerSelection))
+        
+    }
+    
+}
+
+game()
 
 
