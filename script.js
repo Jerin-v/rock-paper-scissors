@@ -57,13 +57,17 @@ function playRound (playerSelection, computerSelection) {
 
 
 function game() {
-    for (i = 0; i < 5; i++) {
+    for (i = 0; i < 20; i++) {
     let playerSelection = prompt("Make Your Move").toLowerCase()
     const computerSelection = getComputerChoice()
 
     console.log(playRound(playerSelection, computerSelection))
     console.log("Player Wins: " + playerWins)
     console.log("Computer Wins: " + computerWins)
+
+    if (playerWins == 5 || computerWins == 5) {
+        break
+    }
     
     }
 }
@@ -71,7 +75,11 @@ function game() {
 
 game()
 
-
+if (playerWins > computerWins) {
+    console.log("You beat the computer!")
+} else {
+    console.log("The computer wins.")
+}
 
 
 
