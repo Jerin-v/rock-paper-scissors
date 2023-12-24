@@ -1,14 +1,4 @@
-/*
-create function 
-randomly choose 1 2 or 3
-if 1 
-    return rock 
-if 2 
-    return paper
-if 3
-    return scissors
 
-*/
 function getComputerChoice() {
     let choice = Math.ceil(Math.random() * 3)
     console.log(choice) //debug
@@ -29,6 +19,7 @@ let computerWins = 0;
 let winner = ""
 
 
+// Plays one round between computer
 function playRound (playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
         return "It's a Tie"
